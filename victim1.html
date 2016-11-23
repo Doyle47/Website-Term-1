@@ -12,17 +12,39 @@
 <h2 class=titleSize> Victim #1: </h2>
 
 <h2 class=subtitleSize> SCOTLAND </h2>
-<img src="Unicorn.jpg" alt="The Animal" style="width:500px;height:550px;">
+<img src="Unicorn.jpg" alt="The Animal" class=tallPicture>
 
 <h2 class=textSize> This is the national animal of scotland </h2>
 <h2 class=textSize> Interesting? </h2>
 
 <!-- In the future I would like to increase the font size of the radio points-->
-<form action="Weird_Stuff.html">
+<form>
 <input type="radio" name="approves" value="yes"> Yes <br>
 <input type="radio" name="approves" value="no"> No <br>
 <input type="radio" name="approves" value="what on earth is this???"> What on earth is this??? <br>
-<input type="submit" value="Submit">
+</form>
+<script type="text/javascript">
+function random_6(){
+    var myrandom=Math.round(Math.random()*5)
+    var link1="victim2.html"
+    var link2="victim3.html"
+	var link3="victim4.html"
+	var link4="victim5.html"
+	var link5="victim6.html"
+    if (myrandom==1)
+        window.location=link1
+    else if (myrandom==2)
+        window.location=link2
+	else if (myrandom==3)
+        window.location=link3
+	else if (myrandom==4)
+        window.location=link4
+	else if (myrandom==5)
+        window.location=link5
+}
+</script>
+<form>
+<input type="button" value="TO THE PAGES" onClick="random_5()">
 </form>
 
 </center>

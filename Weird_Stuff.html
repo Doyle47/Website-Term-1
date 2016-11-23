@@ -3,24 +3,29 @@
 <head>
 <link rel="stylesheet" href="main.css">
 
+
 <title> Weird Stuff </title>
 </head>
 <body>
 <body background="greenback.jpg">
-
+<!--I like the page being centered. -->
 <center>
-
+<!--This table is to put an outline on this log in part. This link leads to a page so that you can log in. -->
 <table>
 <th>Want to log in? Click here!<br>
 <a href="login.html">Login</a></th>
 </table>
 
 <h1 class=titleSize> Weird Stuff </h1>
-
+<!--Both text sizes and title sizes are different as to make the text larger-->
 <h2 class=textSize> Welcome to the Website where you can find weird things and vote!</h2>
 <img src="Unicorn.jpg" alt="The Animal" style="width:500px;height:550px;">
+<!--This table is here just to give an outline to the text -->
 <table>
 <th>Once you've logged in take a look at the pages!<br>
+<!--I'm using math.random so that I can make it so that when poeple click the button it sends them randomly
+to one of the pages I have made. -->
+<!--The only thing with the random is that I cannot stop it from going to the same pages multiple time is a row. -->
 <script type="text/javascript">
 function random_6(){
     var myrandom=Math.round(Math.random()*6)
@@ -45,8 +50,10 @@ function random_6(){
 }
 </script>
 <form>
+<!--THis leads to all the pages. -->
 <input type="button" value="TO THE PAGES" onClick="random_6()">
 </form>
+
 </table>
 </center>
 </body>
