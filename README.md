@@ -2,7 +2,7 @@
 My code is a website about weird things that you can find on the internet.
 This website starts of on a home page that then brings you to multiple other pages where there is one weird fact, image or idea per page.
 
-I would like to have a big dtatabase of pages and a way to make it so that when you select one of the choices underneath the page a graph pops up showing you what others have answered.
+I would like to have a big database of pages and a way to make it so that when you select one of the choices underneath the page a graph pops up showing you what others have answered.
 
 So far I have a home page and 6 different pages that you can access. You access each page by going through a randomizer that brings you to a random page. There are the choices underneath the pages and there is also a login page.
 
