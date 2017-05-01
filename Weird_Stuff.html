@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Stylesheet/main.css">
+
+
+<title> Weird Stuff </title>
+</head>
+<body>
+<body background="Images/greenback.jpg">
+
+<script type="text/javascript">
+var username = ["Doyle", "Gabriel","Pauline"];																//This is the variable that is the username that the code will match against.
+var password = ["Doyle","Gabriel","Pauline"];																	//This is the variable that is the password that the code will match against.
+var wronguser = "Wrong Account"																		//This is the variable that the code will use if the username is wrong.
+var user = prompt("What is your username?")															//This saves a value for the users username.
+var pass = prompt("What is your password?")															//This saves a value for the users password.
+
+for( i = 0; i < username.length; i++){
+	if(username[i] === user){
+		if(password[i] === pass){
+			confirm("Welcome back!")
+		}
+		else{confirm("Sorry wrong account, refresh the page to try again")}
+	}
+}
+
+for( i = 0; i < username.length; i++){
+	if(username[i] === user){
+		if(password[i] === pass){
+			window.onload = function() {
+	document.getElementById("username").innerHTML=user;								//It then uses getElementById to save a function for the username string.
+}
+		}else{window.onload = function() {
+	document.getElementById("wrong").innerHTML=wronguser;}}
+																		//If the username is wrong it uses the wronguser variable to us as string.
+}}
+
+
+
+
+</script>
+
+
+<table>
+<th>Welcome <a id="username"></a><a id="wrong"></a> </th>							<!--This then uses whichever of the variables was saved as string and then inputs them into the 
+																				welcome text --> 
+</table>
+
+
+
+<!--I like the page being centered. -->
+<center>
+<h1 class=titleSize> Weird Stuff </h1>
+<!--Both text sizes and title sizes are different as to make the text larger-->
+<h2 class=textSize> Welcome to the Website where you can find weird things and vote!</h2>
+<img src="Images/Unicorn.jpg" alt="The Animal" style="width:500px;height:550px;">
+<!--This table is here just to give an outline to the text -->
+<table>
+<th>Once you've logged in take a look at the pages!<br>
+<!--I'm using math.random so that I can make it so that when poeple click the button it sends them randomly
+to one of the pages I have made. -->
+<!--The only thing with the random is that I cannot stop it from going to the same pages multiple time is a row. -->
+<script type="text/javascript">
+function random_6(){
+    var myrandom=Math.round(Math.random()*6)
+    var link1="victim1.html"
+    var link2="victim2.html"
+    var link3="victim3.html"
+	var link4="victim4.html"
+	var link5="victim5.html"
+	var link6="victim6.html"
+    if (myrandom==0)
+        window.location=link1
+    else if (myrandom==1)
+        window.location=link2
+    else if (myrandom==2)
+        window.location=link3
+	else if (myrandom==3)
+        window.location=link4
+	else if (myrandom==4)
+        window.location=link5
+	else if (myrandom==5)
+        window.location=link6	
+}
+</script>
+<form>
+<!--This leads to all the pages. -->
+<input type="button" value="TO THE PAGES" onClick="random_6()">
+</form>
+
+</table>
+</center>
+</body>
+</html>
