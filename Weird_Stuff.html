@@ -12,38 +12,37 @@
 <script type="text/javascript">
 var username = ["Doyle", "Gabriel","Pauline"];																//This is the variable that is the username that the code will match against.
 var password = ["Doyle","Gabriel","Pauline"];																	//This is the variable that is the password that the code will match against.
-var wronguser = "Wrong Account"																		//This is the variable that the code will use if the username is wrong.
+var wronguser = "Wrong Account"																	//This is the variable that the code will use if the username is wrong.
 var user = prompt("What is your username?")															//This saves a value for the users username.
-var pass = prompt("What is your password?")															//This saves a value for the users password.
+var pass = prompt("What is your password?")														//This saves a value for the users password.
+var testLogin = true
+												
 
 for( i = 0; i < username.length; i++){
-	if(username[i] === user){
+	if(username[i] === user){ 
 		if(password[i] === pass){
-			confirm("Welcome back!")
-		}
-		else{confirm("Sorry wrong account, refresh the page to try again.")}
+			testLogin = false}
 	}
 }
 
+if(testLogin === true){confirm("Wrong login, refresh the page to try again.")}
+if(testLogin === false){confirm("Welcome back to the pages.")}
+
 for( i = 0; i < username.length; i++){
-	if(username[i] === user){
-		if(password[i] === pass){
+	if(testLogin === false){
 			window.onload = function() {
 	document.getElementById("username").innerHTML=user;								//It then uses getElementById to save a function for the username string.
 }
 		}else{window.onload = function() {
-	document.getElementById("wrong").innerHTML=wronguser;}}
-																		//If the username is wrong it uses the wronguser variable to us as string.
-}}
-
-
+	document.getElementById("wrong").innerHTML=wronguser;}}																		//If the username is wrong it uses the wronguser variable to us as string.
+}
 
 
 </script>
 
 
 <table>
-<th>Welcome <a id="username"></a><a id="wrong"></a> </th>							<!--This then uses whichever of the variables was saved as string and then inputs them into the 
+<th>Welcome <a id="username"></a><a id="wrong"></th>							<!--This then uses whichever of the variables was saved as string and then inputs them into the 
 																				welcome text --> 
 </table>
 
